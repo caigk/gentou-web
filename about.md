@@ -4,15 +4,63 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+## setup
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+```sh
+gem install jekyll bundler
+jekyll new myblog
+```
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+## liquid
 
+* objects
+* tags
+* filters
 
-[jekyll-organization]: https://github.com/jekyll
+## front matter
+
+```yaml
+---
+title: Home
+---
+```
+
+## layouts
+
+```yaml
+---
+layout: default
+title: Home
+---
+```
+
+## includes
+
+目录：_includes
+
+```template
+{ % include navigation.html % }
+```
+
+## data
+
+目录：_data
+
+```yaml
+# _data/navigation.yml
+- name: Home
+  link: /
+- name: About
+  link: /about.html
+```
+
+```template
+<nav>
+  { % for item in site.data.navigation % }
+    
+  { % endfor % }
+</nav>
+```
+
+## Aserts
+
