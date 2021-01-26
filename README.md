@@ -1,2 +1,3 @@
 # gentou-web
 
+:cn: :cn:
